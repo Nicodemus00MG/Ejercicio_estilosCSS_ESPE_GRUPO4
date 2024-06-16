@@ -1,0 +1,173 @@
+/* Definicion de variables CSS */
+:root {
+    --color-principal: #fde4e9; /* Fondo principal */
+    --color-secundario: #b76e79; /* Color de acento */
+    --color-texto: #333; /* Color del texto */
+    --color-fondo-seccion-1: #fde4e9; /* Fondo de la sección Inicio */
+    --color-fondo-seccion-2: #fcd5ce; /* Fondo de la sección Sobre Mi */
+    --color-fondo-seccion-3: #f8a1a1; /* Fondo de la sección Contacto */
+    --color-texto-claro: #fff; /* Texto claro */
+    --color-acento: #e9e3ab; /* Acento para hover */
+    --color-hover: #ffd1dc; /* Color de fondo para hover */
+    --font-family: "Roboto";
+    --transition-duration: 0.3s; /* Transición de hover */
+}
+
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--color-texto);
+    background-color: var(--color-principal);
+}
+
+p, span, h1, h2, li {
+    cursor: pointer; /* Puntero hand */
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    
+    padding: 3rem;
+    background-color: var(--color-secundario);
+    color: var(--color-texto-claro);
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color var(--transition-duration);
+}
+header nav{
+    display: flex;
+  
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+header img{
+
+    width: 75px;
+    margin-left: 5rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none; /* Eliminar el estilo predefinido del navbar */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Espacio entre elementos de navegación */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias líneas si es necesario */
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-texto-claro);
+    font-weight: bold;
+    transition: color var(--transition-duration);
+}
+
+nav a:hover {
+    color: var(--color-acento);
+}
+
+main {
+    padding-top: 10rem; /* Espacio para el header fijo */
+}
+
+section {
+    padding: 10rem;
+    text-align: center;
+    transition: background-color var(--transition-duration);
+}
+
+#inicio {
+    background-color: var(--color-fondo-seccion-1);
+}
+
+#sobre-mi {
+    background-color: var(--color-fondo-seccion-2);
+}
+
+#contacto {
+    background-color: var(--color-fondo-seccion-3);
+}
+
+section:hover {
+    background-color: var(--color-hover);
+}
+
+section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: var(--color-secundario);
+    color: var(--color-texto-claro);
+    text-align: center;
+    padding: 5rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color var(--transition-duration);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+span {
+    color: var(--color-secundario);
+    font-weight: bold;
+}
+
+footer span {
+    color: var(--color-texto-claro);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin-bottom: 10px;
+    }
+
+    main {
+        padding-top: 12rem; /* Ajustar espacio para el header fijo en pantallas pequeñas */
+    }
+}
